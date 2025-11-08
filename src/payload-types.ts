@@ -275,6 +275,15 @@ export interface Post {
 export interface Media {
   id: number;
   alt?: string | null;
+  data?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   caption?: {
     root: {
       type: string;
@@ -1222,6 +1231,7 @@ export interface PostsSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  data?: T;
   caption?: T;
   folder?: T;
   updatedAt?: T;

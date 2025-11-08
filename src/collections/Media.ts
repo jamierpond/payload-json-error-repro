@@ -30,6 +30,10 @@ export const Media: CollectionConfig = {
       //required: true,
     },
     {
+      name: 'data',
+      type: 'json',
+    },
+    {
       name: 'caption',
       type: 'richText',
       editor: lexicalEditor({
